@@ -24,8 +24,8 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./project_101
+      working-directory: .
 
     - name: Build with webpack
       run: npx webpack
-      working-directory: ./project_101
+      working-directory: .
