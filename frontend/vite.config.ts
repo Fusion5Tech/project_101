@@ -2,20 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-const repoName = "project101";
-
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? `/${repoName}/` : '/',
+export default defineConfig({
+  base: '/project101/', 
+  plugins: [react()],
+  build: {
+    outDir: 'dist', 
+  },
   server: {
-    host: "::",
-    port: 8080,
+    port: 3000,
+    open: true,
   },
-  plugins: [
-    react(),
-  ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+});
