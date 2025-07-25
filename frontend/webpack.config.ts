@@ -9,7 +9,7 @@ module.exports = {
   // The entry point of your application.
   // IMPORTANT: Change 'your-main-file.ts' to the actual name of your main TypeScript file
   // (e.g., 'index.ts', 'main.ts', 'app.ts') located inside your 'src' directory.
-  entry: './src/your-main-file.ts', 
+  entry: './src/main.tsx', 
 
   // Output configuration: where webpack bundles your code.
   output: {
