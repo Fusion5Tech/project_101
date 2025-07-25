@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://fusion5tech.github.io/project_101/"
+  "homepage":"https://fusion5tech.github.io/project_101/",
   "scripts": {
   "dev": "vite",
   "build": "vite build",
