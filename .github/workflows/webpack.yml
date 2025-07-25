@@ -23,9 +23,21 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
-      run: npm install
-      # working-directory: ./frontend
+      run: |
+        echo "Current working directory before npm install:"
+        pwd
+        echo "Listing files in current directory:"
+        ls -F
+        echo "Checking for package.json:"
+        test -f package.json && echo "package.json found in $(pwd)" || echo "package.json NOT found in $(pwd)"
+        npm install
+      working-directory: ./frontend 
 
     - name: Build with webpack
-      run: npx webpack
-      # working-directory: ./frontend
+      run: |
+        echo "Current working directory before webpack build:"
+        pwd
+        echo "Listing files in current directory:"
+        ls -F
+        npx webpack
+      working-directory: ./frontend 
